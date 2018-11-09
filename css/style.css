@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --color-primary: #ed9738;
+  --color-txt-primary: #181818;
+  --color-txt-light: #f3f5f8;
+  --color-btn-primary: #fdfdfd;
+  --color-bg-primary: #fff;
+  --color-bg-gradient: linear-gradient(
+    to left top,
+    #ed9738,
+    #bc663d,
+    #803f36,
+    #412225,
+    #000000
+  );
+  --color-btn-secondary: #181818;
+  --color-link-primary: var(--color-primary);
+  --txt-sm: 0.75rem;
+  --border-radius: 0.25rem;
+  --shadow-lg: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  color: var(--color-txt-primary);
+  background-image: var(--color-bg-gradient);
+  font-family: Montserrat, system-ui, BlinkMacSystemFont, -apple-system,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-link-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+#left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#right {
+  flex: 1;
+}
+
+/** Sign in */
+#signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-bg-primary);
+  width: 80%;
+  padding: 2.5rem;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
+  box-shadow: var(--shadow-lg);
+}
+
+#signin form {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+#signin .logo {
+  margin-bottom: 6vh;
+}
+
+#signin .logo img {
+  width: 300px;
+}
+
+#signin label {
+  font-size: 0.875rem;
+  line-height: 2;
+  font-weight: 700;
+}
+
+#signin .text-input {
+  margin: 0;
+  width: 100%;
+  font-size: 100%;
+  border: none;
+  background-color: var(--color-txt-light);
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  outline: 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+#signin .forgot-pw {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#signin .forgot-pw a {
+  font-size: var(--txt-sm);
+}
+
+#signin .primary-btn {
+  width: 100%;
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer .copyright,
+#footer a {
+  font-size: var(--txt-sm);
+}
+
+/** Showcase*/
+#showcase {
+  /* background: url('/images/logo.jpeg') no-repeat center center / cover; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.showcase-text {
+  color: var(--color-txt-light);
+  width: 100%;
+}
+
+/** Buttons */
+.primary-btn {
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--color-btn-primary);
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  border: 0;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #000;
+}
+
+/** Media Queries */
+@media (min-width: 380px) {
+  #left {
+    flex: 2;
+  }
+  #right {
+    flex: 3;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  #right {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #left {
+    flex: 4;
+  }
+  #right {
+    flex: 6;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}

@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #ed9738;
+  --color-secondary: #fbab7e;
   --color-txt-primary: #181818;
   --color-txt-light: #f3f5f8;
   --color-btn-primary: #fdfdfd;
@@ -16,10 +17,11 @@
   );
   --color-bg-gradient-2: linear-gradient(30deg, #fdcd3b 60%, #ffed4b 60%);
   --color-bg-gradient-3: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-
+  --color-hr: #f3f5f8;
   --color-btn-secondary: #181818;
   --color-link-primary: var(--color-primary);
   --txt-sm: 0.75rem;
+  --txt-md: 0.875rem;
   --border-radius: 0.25rem;
   --shadow-lg: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
     0 5px 15px 0 rgba(0, 0, 0, 0.08);
@@ -79,15 +81,14 @@ img {
   max-width: 100%;
 }
 
-hr {
-  width: 80%;
-  background-color: var(--color-primary);
-  height: 1px;
+ul,
+li {
+  padding: 0;
+  margin: 0;
 }
 
 a {
   font-weight: 700;
-  /* font-size: 0.875rem; */
   color: var(--color-link-primary);
   text-decoration: none;
   cursor: pointer;
@@ -116,6 +117,34 @@ a:hover {
   flex: 1;
 }
 
+/** Nav tab */
+.nav-tab-group {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1vh;
+  border-bottom: 1px solid var(--color-hr);
+}
+
+.nav-tab-group .highlight {
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.nav-tab-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-tab-list li {
+  flex: 1;
+}
+
+.nav-tab-list__item a {
+  color: var(--color-txt-primary);
+}
+
 /** Sign in */
 #signin {
   display: flex;
@@ -134,7 +163,7 @@ a:hover {
 }
 
 #signin .logo {
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 
 #signin .logo img {
@@ -170,7 +199,7 @@ a:hover {
 }
 
 .or {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--color-hr);
   width: 80px;
   text-align: center;
   padding-bottom: 0.5vh;

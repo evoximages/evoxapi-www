@@ -126,6 +126,7 @@ a:hover {
 }
 
 .nav-tab-group .highlight {
+  font-weight: 700;
   color: var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
   /* box-shadow: var(--shadow-sm); */
@@ -153,7 +154,7 @@ a:hover {
   align-items: center;
   background-color: var(--color-bg-primary);
   width: 90%;
-  /* max-width: 40vw; */
+  max-width: 440px;
   padding: 2rem;
   margin: 1rem;
   box-shadow: var(--shadow-lg);
